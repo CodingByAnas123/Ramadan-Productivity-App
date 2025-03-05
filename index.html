@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramadan Productivity App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
+    
+    <div class="max-w-lg mx-auto p-6 mt-10 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold text-center mb-4">🌙 Ramadan Productivity App</h1>
+        <!-- Prayer & Ibadah Tracker -->
+         <h2 class="text-lg font-semibold">🕌 Daily Ibadah Tracker</h2>
+         <div class="mt-2 sapce-y-2">
+            <label><input type="checkbox" id="fajr" onclick="saveProgress()">Fajr (4 Rakat)</label><br>
+            <label><input type="checkbox" id="duhr" onclick="saveProgress()">Duhr (12 Rakat)</label><br>
+            <label><input type="checkbox" id="asr" onclick="saveProgress()">Asr (8 Rakat)</label><br>
+            <label><input type="checkbox" id="maghrib" onclick="saveProgress()">Maghrib (7 Rakat)</label><br>
+            <label><input type="checkbox" id="isha" onclick="saveProgress()">Isha (15 Rakat)</label><br>
+            <label><input type="checkbox" id="tarawih" onclick="saveProgress()">Tarawih (20 Rakat)</label>
+         </div>
+         <!-- Task List -->
+          <h2 class="mt-6 text-lg font-semibold">✅ Task List</h2>
+          <input type="text" id="taskInput" class="w-full p-2 border rounded-lg text-black" placeholder="Add a new task....">
+          <button onclick="addTask()" class="mt-2 w-full bg-green-500 text-white p-2 rounded-lg">Add Task</button>
+          <ul id="taskList" class="mt-4 sapce-y-2"></ul>
+          <!-- Countdown Timer -->
+           <h2 class="mt-6 text-lg font-semibold">⏳ Next Iftar In:</h2>
+           <p id="timer" class="text-2xl font-bold text-green-500">00:00:00</p>
+           <!-- Dark Mode Toggle -->
+            <button onclick="toggleDarkMode()" class="mt-4 w-full bg-gray-700 text-white p-2 rounded-lg">Toggle Dark Mode</button>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
